@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TodosTest {
 
     SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
-    String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
+    String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
     Epic epic = new Epic(55, subtasks);
     Meeting meeting = new Meeting(
             555,
@@ -26,7 +26,7 @@ class TodosTest {
 
     @Test
     public void shouldAddThreeTasksOfDifferentType() {
-        Task[] expected = { simpleTask, epic, meeting };
+        Task[] expected = {simpleTask, epic, meeting};
         Task[] actual = todos.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
